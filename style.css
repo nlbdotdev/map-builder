@@ -1,0 +1,21 @@
+
+.draggable {
+    width: 90px;
+    height: 90px;
+    padding: 0.5em;
+    float: left;
+    margin: 3px;
+    border: solid 1px black;
+}
+
+#draggable {
+    cursor: n-resize;
+}
+
+
+#containment-wrapper {
+    width: 95%;
+    height: 150px;
+    border: 2px solid #ccc;
+    padding: 10px;
+}
