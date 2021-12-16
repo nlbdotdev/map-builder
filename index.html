@@ -30,7 +30,13 @@
 
 
 
-        <button id="trigger">Click me</button>
+        <button class="trigger settings">Settings</button>
+        <button class="trigger assets">Assets</button>
+        <button class="trigger node node-1">Node</button>
+
+
+
+        <!-- <button id="trigger">Click me</button> -->
 
 
         <!-- <div id="overlay">
@@ -48,40 +54,57 @@
         <div id="overlay">
             <div id="popup">
 
+                <!-- To Do -->
+                <div class="close">X</div> 
 
-                <!-- menus go here -->
+                <div id="assets">
+                    <div class="assets-text">Maps:</div>
+                    <div id="assets-maps"></div>
 
-                <!-- 
-                <div id="close">Edit</div>
+                    <div class="assets-text">Backgrounds:</div>
 
-                <div id="close">X</div> -->
+                    <div class="assets-text">Music:</div>
 
-                <div id="node-title">
-                    <div id="node-title-text">Dark Forest</div>
+                    <div class="assets-text">Ambiance:</div>
                 </div>
 
-
-                <div id="node-header" style="background-image: url(./images/backgrounds/1.jpg);">
-
-
-
-                    <div id="node-header-overlay">
-                        <p id="node-lore">Little is known of this place. A thick fog blankets the floor, which is
-                            covered in leaves.</p>
+                <div id="settings">
+                    <div id="setttings-map">
+                        <div id="settings-map-text">Map BG: </div>
+                        <div id="setting-map-upload">
+                            <input type="file">
+                        </div>
                     </div>
-
+                    <div id="setting-mapSize">
+                        <div id="settings-mapSize-text">Map Size: </div>
+                        <div id="settings-mapSize-width">
+                            <input type="text">
+                        </div>
+                        <div id="settings-mapSize-text2">x</div>
+                        <div id="settings-mapSize-height">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <img id="settings-mapPreview" src="" alt="map">
                 </div>
 
-
-                <div id="node-menu">
-                    Temp Stuff
-                    <input type="text">
-
+                <div id="node">
+                    <div id="node-title">
+                        <div id="node-title-text">Dark Forest</div>
+                    </div>
+                    <div id="node-header" style="background-image: url(./images/backgrounds/1.jpg);">
+                        <div id="node-header-overlay">
+                            <p id="node-lore">Little is known of this place. A thick fog blankets the floor, which is
+                                covered in leaves that look like they should've died ages ago, but are somehow still
+                                green.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="node-menu">
+                        Temp Stuff
+                        <input type="text">
+                    </div>
                 </div>
-
-
-
-
 
             </div>
         </div>

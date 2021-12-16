@@ -1,3 +1,5 @@
+/* Drag Stuff */
+
 .draggable {
   width: 90px;
   height: 90px;
@@ -11,43 +13,32 @@
   cursor: n-resize;
 }
 
-
 #drag-box {
-  /* width: 95%;
-    height: 150px; */
   width: 875px;
   height: 656px;
   border: 2px solid #ccc;
-  /* padding: 10px; */
-
   background-image: url('./images/maps/PlaceholderMap.png');
   background-repeat: no-repeat;
-
 }
 
-/*  */
+/* Popups and Overlay */
 
-button {
+/* button {
   background: #000;
   color: #fff;
   text-align: center;
   font-weight: bold;
   padding: 10px 30px;
   border-radius: 3px;
-}
+} */
 
-/*   
-  #overlay {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0,0,0,0.8);
-    display: none;
-  } */
+#close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: rgb(240, 240, 240);
+}
 
 #overlay {
   position: fixed;
@@ -58,7 +49,7 @@ button {
   bottom: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.8);
-  /* display: none; */
+  display: none;
 }
 
 #popup {
@@ -72,64 +63,59 @@ button {
   position: relative;
   background: black;
   margin: 10vh auto;
+
+  color: whitesmoke;
 }
 
 
+/* Assets */
+#assets {
+  display: none;
+}
+
+/* Settings */
+#settings {
+  display: none;
+}
+
+/* Map Nodes */
+
+#node {
+  height: 100%;
+  display: none;
+}
+
 #node-title {
-
-
-
-
-
-
-
-
-  height: 7%;
-  display : flex;
-  align-items : center;
+  height: 10%;
+  display: flex;
+  align-items: center;
   justify-content: space-around;
-
 }
 
 #node-title-text {
-
-
-  color: whitesmoke;
-
-  
-  /* text-align: center;
-  vertical-align: middle;
-
-  height: 100% */
-
-  /* text-align: center; */
-
-
-
+  /* color: whitesmoke; */
+  font-size: xxx-large;
+  text-shadow: 0px 0px 10px whitesmoke;
 }
 
 #node-header {
-  height: 50%;
-
+  height: 60%;
   background-size: cover;
   background-position: 0% 50%;
-  
-
 }
 
 #node-header-overlay {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  text-align: justify;
 }
 
 #node-lore {
-  /* margin: 0%; */
-  color: whitesmoke;
-}
-
-#close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  color: #000;
+  margin: 2%;
+  /* color: whitesmoke; */
+  font-size: x-large;
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  text-shadow: 1px 1px 1px black;
 }
