@@ -1,3 +1,20 @@
+/* Editor */
+#editor {
+  /* display: none; */
+}
+
+.block {
+  border: 1px black solid;
+  /* height: 100px; */
+}
+
+
+/* Map */
+#map {
+  display: none;
+}
+
+
 /* Drag Stuff */
 
 .draggable {
@@ -17,8 +34,9 @@
   width: 875px;
   height: 656px;
   border: 2px solid #ccc;
-  background-image: url('./images/maps/PlaceholderMap.png');
+  background-image: url('./images/maps/map.png');
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /* Popups and Overlay */

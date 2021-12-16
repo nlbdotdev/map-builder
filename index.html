@@ -12,100 +12,151 @@
 <body>
     <header>
         <h1>Tabletop Atmospheres</h1>
-        <div><button>+</button></div>
+        <div><button>Play</button></div>
+        <div><button>Edit</button></div>
     </header>
+
+    <br>
 
     <main>
 
-        <div id="drag-box">
-            <div id="icon-1" class="draggable ui-widget-content">
-                <p>I'm contained within the box</p>
-                <!-- <img src="./images/icons/Node.png" alt=""> -->
+
+        <div id="editor">
+            <div class="block">
+
+
+                <img src="./images/icons/trees.png" alt="">
+                <div class="block-icon">
+                    <label for="icon" class="block-text">Icon: </label>
+                    <select name="icon" id="i">
+                        <option value="trees">Trees</option>
+                        <option value="lake">Lake</option>
+                        <option value="mountain">Mountain</option>
+                        <option value="village">Village</option>
+                    </select>
+                </div>
+
+                <div class="block-BG">
+                    <label for="BG" class="block-text">BG URL: </label>
+                    <input type="text class=" block-BG" value="./">
+                </div>
+
+                <div class="block-music">
+                    <label for="music" class="block-text">Music URL: </label>
+                    <input type="text class=" block-music" value="./">
+                </div>
+
+                <div class="block-ambiance">
+                    <label for="ambiance" class="block-text">Ambiance URL: </label>
+                    <input type="text class=" block-ambiance" value="./">
+                </div>
+
+<br>
+
+                <div class="block-name">
+                    <label for="name" class="block-text">Name: </label>
+                    <input type="text class=" block-name" value="Jeff">
+                </div>
+
+
+                <div class="block-lore">
+                    <label for="name" class="block-lore">Lore: </label>
+                    <textarea class="block-lore"></textarea>
+                </div>
+
+                <br>
+
+                <div class="block-save">
+                    <button>SAVE</button>
+                    </div>
+                <!-- <div class="block-preview">PREVIEW</div> -->
+                <div class="block-add">
+                    <button>ADD</button>
+                </div>
+                <div class="block-delete">
+                    <button>DELETE</button>
+                </div>
+
+
             </div>
 
-            <div id="icon-2" class="draggable ui-widget-content">
-                <p>I'm contained within the box</p>
-            </div>
+
         </div>
 
 
-
-        <button class="trigger settings">Settings</button>
-        <button class="trigger assets">Assets</button>
-        <button class="trigger node node-1">Node</button>
-
-
-
-        <!-- <button id="trigger">Click me</button> -->
-
-
-        <!-- <div id="overlay">
-          <div id="popup">
-            <div id="close">X</div>
-            <h2>This is a popup</h2>
-            <p>You just triggered a popup</p>
-            <input type="text">
-          </div>
-        </div> -->
-
-
-        <!-- // convert to Node -->
-
-        <div id="overlay">
-            <div id="popup">
-
-                <!-- To Do -->
-                <div class="close">X</div> 
-
-                <div id="assets">
-                    <div class="assets-text">Maps:</div>
-                    <div id="assets-maps"></div>
-
-                    <div class="assets-text">Backgrounds:</div>
-
-                    <div class="assets-text">Music:</div>
-
-                    <div class="assets-text">Ambiance:</div>
+        <div id="map">
+            <div id="drag-box">
+                <div id="icon-1" class="draggable ui-widget-content">
+                    <p>I'm contained within the box</p>
+                    <!-- <img src="./images/icons/Node.png" alt=""> -->
                 </div>
-
-                <div id="settings">
-                    <div id="setttings-map">
-                        <div id="settings-map-text">Map BG: </div>
-                        <div id="setting-map-upload">
-                            <input type="file">
-                        </div>
+                <div id="icon-2" class="draggable ui-widget-content">
+                    <p>I'm contained within the box</p>
+                </div>
+            </div>
+            <button class="trigger settings">Settings</button>
+            <button class="trigger assets">Assets</button>
+            <button class="trigger node node-1">Node</button>
+            <!-- <button id="trigger">Click me</button> -->
+            <!-- <div id="overlay">
+              <div id="popup">
+                <div id="close">X</div>
+                <h2>This is a popup</h2>
+                <p>You just triggered a popup</p>
+                <input type="text">
+              </div>
+            </div> -->
+            <!-- // convert to Node -->
+            <div id="overlay">
+                <div id="popup">
+                    <!-- To Do -->
+                    <div class="close">X</div>
+                    <div id="assets" class="popup-menu">
+                        <div class="assets-text">Maps:</div>
+                        <div id="assets-maps"></div>
+                        <div class="assets-text">Backgrounds:</div>
+                        <div class="assets-text">Music:</div>
+                        <div class="assets-text">Ambiance:</div>
                     </div>
-                    <div id="setting-mapSize">
-                        <div id="settings-mapSize-text">Map Size: </div>
-                        <div id="settings-mapSize-width">
+                    <div id="settings" class="popup-menu">
+                        <div id="setttings-map">
+                            <div id="settings-map-text">Map BG: </div>
+                            <div id="setting-map-upload">
+                                <input type="file">
+                            </div>
+                        </div>
+                        <div id="setting-mapSize">
+                            <div id="settings-mapSize-text">Map Size: </div>
+                            <div id="settings-mapSize-width">
+                                <input type="text">
+                            </div>
+                            <div id="settings-mapSize-text2">x</div>
+                            <div id="settings-mapSize-height">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <img id="settings-mapPreview" src="" alt="map">
+                    </div>
+                    <div id="node" class="popup-menu">
+                        <div id="node-title">
+                            <div id="node-title-text">Dark Forest</div>
+                        </div>
+                        <div id="node-header" style="background-image: url(./images/backgrounds/1.jpg);">
+                            <div id="node-header-overlay">
+                                <p id="node-lore">Little is known of this place. A thick fog blankets the floor, which
+                                    is
+                                    covered in leaves that look like they should've died ages ago, but are somehow still
+                                    green.
+                                    <input type="text">
+                                </p>
+                            </div>
+                        </div>
+                        <div id="node-menu">
+                            Temp Stuff
                             <input type="text">
                         </div>
-                        <div id="settings-mapSize-text2">x</div>
-                        <div id="settings-mapSize-height">
-                            <input type="text">
-                        </div>
-                    </div>
-                    <img id="settings-mapPreview" src="" alt="map">
-                </div>
-
-                <div id="node">
-                    <div id="node-title">
-                        <div id="node-title-text">Dark Forest</div>
-                    </div>
-                    <div id="node-header" style="background-image: url(./images/backgrounds/1.jpg);">
-                        <div id="node-header-overlay">
-                            <p id="node-lore">Little is known of this place. A thick fog blankets the floor, which is
-                                covered in leaves that look like they should've died ages ago, but are somehow still
-                                green.
-                            </p>
-                        </div>
-                    </div>
-                    <div id="node-menu">
-                        Temp Stuff
-                        <input type="text">
                     </div>
                 </div>
-
             </div>
         </div>
 
