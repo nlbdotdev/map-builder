@@ -12,8 +12,10 @@
 <body>
     <header>
         <h1>Tabletop Atmospheres</h1>
-        <div><button>Play</button></div>
-        <div><button>Edit</button></div>
+        <div id="modes">
+            <div id="modes-play"><button>Play</button></div>
+            <div id="modes-edit"><button>Edit</button></div>
+        </div>
     </header>
 
     <br>
@@ -22,13 +24,12 @@
 
 
         <div id="editor">
-            <div class="block">
-
-
-                <img src="./images/icons/trees.png" alt="">
+            <div class="block block-1">
                 <div class="block-icon">
+                    <img src="./images/icons/trees.png" alt="" class="block-icon-thumbnail">
+                    <br>
                     <label for="icon" class="block-text">Icon: </label>
-                    <select name="icon" id="i">
+                    <select name="icon" class="block-icon-select">
                         <option value="trees">Trees</option>
                         <option value="lake">Lake</option>
                         <option value="mountain">Mountain</option>
@@ -38,24 +39,24 @@
 
                 <div class="block-BG">
                     <label for="BG" class="block-text">BG URL: </label>
-                    <input type="text class=" block-BG" value="./">
+                    <input type="text class=" block-BG" value="./images/backgrounds/2.jpg">
                 </div>
 
                 <div class="block-music">
                     <label for="music" class="block-text">Music URL: </label>
-                    <input type="text class=" block-music" value="./">
+                    <input type="text class=" block-music" value="./audio/music/tavern.mp3">
                 </div>
 
                 <div class="block-ambiance">
                     <label for="ambiance" class="block-text">Ambiance URL: </label>
-                    <input type="text class=" block-ambiance" value="./">
+                    <input type="text class=" block-ambiance" value="./audio/music/plains.mp3">
                 </div>
 
-<br>
+                <br>
 
                 <div class="block-name">
                     <label for="name" class="block-text">Name: </label>
-                    <input type="text class=" block-name" value="Jeff">
+                    <input type="text" class="block-name-input" value="Jeff">
                 </div>
 
 
@@ -66,13 +67,11 @@
 
                 <br>
 
-                <div class="block-save">
-                    <button>SAVE</button>
-                    </div>
-                <!-- <div class="block-preview">PREVIEW</div> -->
-                <div class="block-add">
-                    <button>ADD</button>
+                <div>
+                    <button class="block-save block-1">SAVE</button>
                 </div>
+                <!-- <div class="block-preview">PREVIEW</div> -->
+
                 <div class="block-delete">
                     <button>DELETE</button>
                 </div>
@@ -80,6 +79,11 @@
 
             </div>
 
+            <br>
+
+            <div class="block-add">
+                <button>ADD</button>
+            </div>
 
         </div>
 
