@@ -7,15 +7,26 @@
   align-items: center;
 }
 
-#editor > .block > div > div {
+#blocks .block > div > div {
   display: flex;
   flex-direction: column;
+}
+
+#blocks {
+  width: 100%;
+  max-width: 920px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
+  gap: 10px;
 }
 
 .block {
   border: 1px black solid;
   /* height: 100px; */
-
 
   width: 100%;
   max-width: 920px;
@@ -28,6 +39,7 @@
 
   /* justify-content: center; */
   align-items: center;
+
 }
 
 
