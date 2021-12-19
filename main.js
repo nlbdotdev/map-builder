@@ -13,7 +13,8 @@ function updateNodes() {
 
     let id = node.id
 
-    console.log(node.id)
+    console.log(id)
+    console.log(typeof(id))
 
     $(`#node-${id} > .title`)[0].innerHTML = node.name
 
@@ -142,7 +143,7 @@ function addBlock() {
       </select>
       <div class="block-name">
           <label for="name" class="block-text">Name: </label>
-          <input type="text" class="block-name-input" value="Jeff">
+          <input type="text" class="block-name-input" value="Name">
       </div>
       <div class="block-lore">
           <label for="name" class="block-lore">Lore: </label>
@@ -181,16 +182,55 @@ function addBlock() {
   $('#blocks').append(newBlock)
 
 
+
   $(`.block-${currentBlock} .block-icon-select`).on('change', (e) => {
     // alert('Value change to ' + e.target.value)
     changeBlockIcon(currentBlock, e.target.value)
   })
 
-  
+
+  $(`.block-${currentBlock} .block-save`).click((e) => {
+
+    console.log(e.target)
+
+    const id = e.target.classList[1].split("-")[1]
+    const icon = $(`.block-${currentBlock} .block-icon-select`)[0].value
+    const bg = ''
+    const music = ''
+    const url = ''
+    const name = $(`.block-${currentBlock} .block-name-input`)[0].value
+    const lore = ''
+    const node = new MapNode(currentBlock, icon, bg, music, url, name, lore)
+
+
+    // current dupes
+    MapNodes.push(node)
+  })
+
+
+  let newMapNode = $(` 
+    <div id="node-${currentBlock}" class="draggable">
+    <div class="icon"><img src="" alt=""></div>
+    <div class="title">Test</div>
+    <div class></div>
+    </div>`
+  )
+
+  $('#drag-box').append(newMapNode)
+
+  $(() => {
+    $(".draggable").draggable({ containment: "#drag-box", scroll: false });
+  });
 
 
 }
 
+
+// $('#node-1').click(() => {
+//   $('audio')[0].src = "./audio/music/tavern.mp3"
+//   $('audio')[0].play()
+//   console.log('yes')
+// })
 
 
 
