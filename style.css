@@ -1,11 +1,33 @@
+
 /* Editor */
 #editor {
   /* display: none; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#editor > .block > div > div {
+  display: flex;
+  flex-direction: column;
 }
 
 .block {
   border: 1px black solid;
   /* height: 100px; */
+
+
+  width: 100%;
+  max-width: 920px;
+
+
+  display: flex;
+  /* gap: auto%; */
+
+  justify-content: space-around;
+
+  /* justify-content: center; */
+  align-items: center;
 }
 
 
@@ -18,12 +40,33 @@
 /* Drag Stuff */
 
 .draggable {
-  width: 90px;
-  height: 90px;
-  padding: 0.5em;
+  /* width: 90px; */
+  /* height: 90px; */
+  /* padding: 0.5em; */
   float: left;
-  margin: 3px;
-  border: solid 1px black;
+  /* margin: 3px; */
+  /* border: solid 1px black; */
+}
+
+.draggable > .title {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: xx-large;
+
+  /* white-space: nowrap; */
+  white-space: normal;
+  font-family: 'Vujahday Script', cursive;
+
+  /* border: black 1px solid; */
+  color: rgb(53, 18, 18);
+  
+  /* background-color: rgba(0, 0, 0, 0.049); */
+  /* border-radius: 50%; */
+  width: 100%;
+  text-align: center;
+  text-shadow: 0px 0px 1px rgb(53, 18, 18);
 }
 
 #draggable {
@@ -31,8 +74,8 @@
 }
 
 #drag-box {
-  width: 875px;
-  height: 656px;
+  width: 883px;
+  height: 595px;
   border: 2px solid #ccc;
   background-image: url('./images/maps/map.png');
   background-repeat: no-repeat;
@@ -98,9 +141,9 @@
 
 /* Map Nodes */
 
-#node {
+.node {
   height: 100%;
-  display: none;
+  /* display: none; */
 }
 
 #node-title {

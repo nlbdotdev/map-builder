@@ -1,14 +1,42 @@
 // --- MODES ---
 
+
+// load in nodes
 $('#modes-play').click(() => {
   changeMode('play')
+  updateNodes()
 })
+
+
+function updateNodes() {
+  // for each mapNodes array, select node-id
+
+  for (const node of MapNodes) {
+
+    let id = node.id
+
+    console.log(node.id)
+
+     $(`#node-${id} > .title`)[0].innerHTML = node.name
+
+    console.log(node.icon)
+
+     $(`#node-${id} > .icon > img`)[0].src = node.icon
+
+
+
+    console.log(node.name)
+
+  }
+}
+
+
 
 $('#modes-edit').click(() => {
   changeMode('edit')
 })
 
-function changeMode(mode){
+function changeMode(mode) {
   if (mode === 'play') {
     $('#editor').hide()
     $('#map').show()
@@ -27,14 +55,16 @@ function changeMode(mode){
 // https://www.reddit.com/r/Frontend/comments/rgz6d7/doodle_css_a_simple_hand_drawn_htmlcss_theme/
 
 function MapNode(id, icon, bg, music, url, name, lore) {
-    this.id = id
-    this.icon = icon
-    this.bg = bg
-    this.music = music
-    this.url = url
-    this.name = name
-    this.lore = lore
-  }
+  this.id = id
+  this.icon = getIconPath(icon)
+  this.bg = bg
+  this.music = music
+  this.url = url
+  this.name = name
+  this.lore = lore
+  this.x = 0
+  this.y = 0
+}
 
 const MapNodes = []
 
@@ -43,11 +73,11 @@ $('.block-save').click((e) => {
   console.log(e.target)
 
   const id = e.target.classList[1].split("-")[1]
-  const icon = $(`.block-${id} > .block-icon > .block-icon-select`)[0].value
+  const icon = $(`.block-${id} .block-icon-select`)[0].value
   const bg = ''
   const music = ''
   const url = ''
-  const name = $(`.block-${id} > .block-name > .block-name-input`)[0].value
+  const name = $(`.block-${id} .block-name-input`)[0].value
   const lore = ''
   const node = new MapNode(id, icon, bg, music, url, name, lore)
 
@@ -79,6 +109,10 @@ function changeBlockIcon(id, image) {
 
 
 
+
+function getIconPath(icon) {
+  return `./images/icons/${icon}.png`
+}
 
 
 
