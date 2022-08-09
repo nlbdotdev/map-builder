@@ -1,5 +1,5 @@
 # Map Builder
-Map Builder is a web application that allows users to build maps with customized locations. Currently users can add nodes, rename, and move them. MB is built with JS, HTML, CSS, and JQuery.
+Map Builder is a web application that allows users to build maps with customized locations. Currently users can add nodes, rename, and move them. MB is built with JS, HTML, CSS, and jQuery.
 
 ## Features
 
