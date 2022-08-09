@@ -9,8 +9,8 @@ Map Builder is a web application that allows users to build maps with customized
 
 
 ## Attribution
-* Audio: https://tabletopaudio.com/
 * Map Assets: https://opengameart.org/content/simple-map-tiles
+* Audio: https://tabletopaudio.com/
 * Backgrounds: https://unsplash.com/
 
 ## Images
