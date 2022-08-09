@@ -14,7 +14,7 @@ function updateNodes() {
     let id = node.id
 
     console.log(id)
-    console.log(typeof(id))
+    console.log(typeof (id))
 
     $(`#node-${id} > .title`)[0].innerHTML = node.name
 
@@ -43,9 +43,7 @@ function changeMode(mode) {
 }
 
 
-
 // --- EDITOR ---
-
 // live update icon image
 // create / update object on SAVE
 // make play / edit toggle work
@@ -88,22 +86,15 @@ $('.block-save').click((e) => {
 
 // push x to nodes array...
 
-
-////
-
-
 $('.block-icon-select').on('change', (e) => {
   // alert('Value change to ' + e.target.value)
   changeBlockIcon(1, e.target.value)
 })
 
-
-
 function changeBlockIcon(id, image) {
   // Select proper block
   let img = $(`.block-${id} > .block-icon > .block-icon-thumbnail`)[0]
   img.src = `./images/icons/${image}.png`;
-
   console.log(image)
 }
 
@@ -111,10 +102,6 @@ function changeBlockIcon(id, image) {
 function getIconPath(icon) {
   return `./images/icons/${icon}.png`
 }
-
-
-
-//
 
 let blocks = 1
 
@@ -166,7 +153,6 @@ function addBlock() {
       </div>
   </div>
 
-
   <div>
       <div>
           <button class="block-save block-${blocks}">SAVE</button>
@@ -180,14 +166,10 @@ function addBlock() {
 
 
   $('#blocks').append(newBlock)
-
-
-
   $(`.block-${currentBlock} .block-icon-select`).on('change', (e) => {
     // alert('Value change to ' + e.target.value)
     changeBlockIcon(currentBlock, e.target.value)
   })
-
 
   $(`.block-${currentBlock} .block-save`).click((e) => {
 
@@ -202,11 +184,9 @@ function addBlock() {
     const lore = ''
     const node = new MapNode(currentBlock, icon, bg, music, url, name, lore)
 
-
     // current dupes
     MapNodes.push(node)
   })
-
 
   let newMapNode = $(` 
     <div id="node-${currentBlock}" class="draggable">
@@ -221,17 +201,13 @@ function addBlock() {
   $(() => {
     $(".draggable").draggable({ containment: "#drag-box", scroll: false });
   });
-
-
 }
-
 
 // $('#node-1').click(() => {
 //   $('audio')[0].src = "./audio/music/tavern.mp3"
 //   $('audio')[0].play()
 //   console.log('yes')
 // })
-
 
 
 // --- MAP ---
@@ -257,16 +233,12 @@ $('.close').click(() => {
   closeMenu()
 });
 
-
-
 function openMenu(type, subtype) {
 
   // console.log(type, subtype)
 
   $('.popup-menu').hide()
-
   $('#overlay').fadeIn(300)
-
 
   switch (type) {
     case 'settings':
@@ -282,16 +254,8 @@ function openMenu(type, subtype) {
       $('#node').show()
       break;
   }
-
 }
 
 function closeMenu() {
-
-
-
   $('#overlay').fadeOut(300);
 }
-
-
-// Assets
-

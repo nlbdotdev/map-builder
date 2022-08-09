@@ -1,5 +1,5 @@
-
 /* Editor */
+
 #editor {
   /* display: none; */
   display: flex;
@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-#blocks .block > div > div {
+#blocks .block>div>div {
   display: flex;
   flex-direction: column;
 }
@@ -15,37 +15,28 @@
 #blocks {
   width: 100%;
   max-width: 920px;
-  
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-  
   gap: 10px;
 }
 
 .block {
   border: 1px black solid;
-  /* height: 100px; */
-
   width: 100%;
   max-width: 920px;
-
-
   display: flex;
-  /* gap: auto%; */
-
   justify-content: space-around;
-
-  /* justify-content: center; */
   align-items: center;
-
 }
 
-
 /* Map */
+
 #map {
   display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 
@@ -60,7 +51,7 @@
   /* border: solid 1px black; */
 }
 
-.draggable > .title {
+.draggable>.title {
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -73,7 +64,7 @@
 
   /* border: black 1px solid; */
   color: rgb(53, 18, 18);
-  
+
   /* background-color: rgba(0, 0, 0, 0.049); */
   /* border-radius: 50%; */
   width: 100%;
@@ -88,7 +79,7 @@
 #drag-box {
   width: 883px;
   height: 595px;
-  border: 2px solid #ccc;
+  /* border: 2px solid #ccc; */
   background-image: url('./images/maps/map.png');
   background-repeat: no-repeat;
   background-size: contain;
@@ -128,18 +119,14 @@
 #popup {
   width: 80%;
   height: 50%;
-
   max-width: 800px;
   min-height: 600px;
-
   /* padding: 20px; */
   position: relative;
   background: black;
   margin: 10vh auto;
-
   color: whitesmoke;
 }
-
 
 /* Assets */
 #assets {
@@ -191,4 +178,10 @@
   font-size: x-large;
   /* background-color: rgba(0, 0, 0, 0.6); */
   text-shadow: 1px 1px 1px black;
+}
+
+textarea {
+  /* resize: x; */
+  max-width: 200px;
+  max-height: 100px;
 }

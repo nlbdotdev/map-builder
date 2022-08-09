@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabletop Atmospheres</title>
+    <title>Map Builder</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <h1>Tabletop Atmospheres</h1>
+        <h1>Map Builder</h1>
         <div id="modes">
             <div id="modes-play"><button>Play</button></div>
             <div id="modes-edit"><button>Edit</button></div>
@@ -45,7 +45,7 @@
                         </select>
                         <div class="block-name">
                             <label for="name" class="block-text">Name: </label>
-                            <input type="text" class="block-name-input" value="Jeff">
+                            <input type="text" class="block-name-input" value="Forest">
                         </div>
                         <div class="block-lore">
                             <label for="name" class="block-lore">Lore: </label>
@@ -88,9 +88,8 @@
         </div>
 
         <!-- MAP -->
-
-
         <div id="map">
+            
             <div id="drag-box">
                 <div id="node-1" class="draggable">
 
@@ -98,19 +97,13 @@
                     <div class="title">Test</div>
                     <div class></div>
                 </div>
-
-                <!-- <div id="icon-2" class="draggable ui-widget-content">
-                    <p>I'm contained within the box</p>
-                </div> -->
             </div>
-<!-- 
-            <button class="trigger node">Node</button> -->
+
+            <button class="trigger node">Node</button>
 
             <!-- // convert to Node -->
             <div id="overlay">
                 <div id="popup">
-                    <!-- To Do -->
-
                     <div class="close">X</div>
 
                     <div id="node" class="popup-menu">
@@ -123,29 +116,30 @@
                                     is
                                     covered in leaves that look like they should've died ages ago, but are somehow still
                                     green.
-                                    <input type="text">
                                 </p>
                             </div>
                         </div>
                         <div id="node-menu">
-                            Temp Stuff
-                            <input type="text">
+
+                            <div>
+                                <h2>Ambiance</h2>
+                                <audio controls src="./audio/ambiance/plains.mp3"></audio>
+                            </div>
+
+                            <div>
+                                <h2>Music</h2>
+                                <audio controls src="./audio/music/witch.mp3"></audio>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
-
-
-            <!-- <audio controls src=""></audio> -->
-
         </div>
-
-
 
     </main>
 
     <footer>
-
     </footer>
 
     <script src="./jquery-3.6.0.min.js"></script>
