@@ -7,6 +7,12 @@ Map Builder is a web application that allows users to build maps with customized
 * Ability to change node icons and name and have those updated on the map
 * Ability to move nodes on the map
 
+
+## Attribution
+* Audio: https://tabletopaudio.com/
+* Map Assets: https://opengameart.org/content/simple-map-tiles
+* Backgrounds: https://unsplash.com/
+
 ## Images
 
 ![preview image](./preview.png)
